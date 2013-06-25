@@ -22,7 +22,7 @@ public class Echo extends CordovaPlugin {
 
     private void echo(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) { 
-            callbackContext.success(message);
+            callbackContext.success(message.replace('e','i'));
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
