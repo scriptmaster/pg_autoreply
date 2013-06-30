@@ -2,4 +2,7 @@ v1.0.1
 <textarea id="code"></textarea>
 <br>
 <button onclick="alert(eval(document.getElementById('code').value))">eval</button>
+<button onclick="var i=0, y=eval(document.getElementById('code').value); for(var x in y) alert([++i,x,y[x]])">list</button>
+<button onclick="var a=eval($('#code').value);b=a.splice(4);alert(a);alert(b);alert(cordova.exec(a[0],a[1],a[2],a[3],b));">exec</button>
 <script master src="phonegap.js"></script>
+<script master src="mylib.js"></script>
