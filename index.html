@@ -4,6 +4,6 @@ v1.0.3
 <button onclick="alert(eval($('#code')[0].value))">eval</button>
 <button onclick="var i=0, y=eval($('#code')[0].value); for(var x in y) alert([++i,x,y[x]])">list</button>
 <button onclick="var a=eval($('#code')[0].value);b=a.splice(4);alert(a);alert(b);alert(cordova.exec(a[0],a[1],a[2],a[3],b));">exec</button>
-<button onclick="cordova.exec(function(){alert(arguments)},function(e){alert(['failed',e])},'Echo','echo',[$('#code')[0].value])">Echo</button>
+<button onclick="cordova.exec(function(){for(var x in arguments)alert([x,arguments[x]])},function(e){alert(['failed',e])},'Echo','echo',[$('#code')[0].value])">Echo</button>
 <script master src="phonegap.js"></script>
 <script master src="js/mylib.js"></script>
