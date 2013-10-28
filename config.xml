@@ -52,6 +52,9 @@
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
 
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="com.phonegap.plugins.PushPlugin"/>
+
     <plugin name="Echo" value="Echo" />
 
     <!-- Define app icon for each platform. --
